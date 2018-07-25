@@ -24,7 +24,6 @@
 	<mapping resource="com/tytlj/www/pojo/DayWork.hbm.xml" />
 	<mapping resource="com/tytlj/www/pojo/StaticPg.hbm.xml" />
 	<mapping resource="com/tytlj/www/pojo/CountDayWork.hbm.xml" />
-	<mapping resource="com/tytlj/www/pojo/SalaryperFormance.hbm.xml" />
 	<mapping resource="com/tytlj/www/pojo/AccountInfo.hbm.xml" />
 	<mapping resource="com/tytlj/www/pojo/Pothook.hbm.xml" />
 	<mapping resource="com/tytlj/www/pojo/Salary.hbm.xml" />
