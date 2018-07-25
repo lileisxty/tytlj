@@ -28,7 +28,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.tytlj.www.dao.IAdmittance;
 import com.tytlj.www.pojo.Salary;
 import com.tytlj.www.service.SalaryService;
 import com.tytlj.www.util.GetMounthDay;
@@ -44,7 +43,7 @@ import com.tytlj.www.util.MakeMajorKey;
  */
 @Controller
 @RequestMapping("/distribution/")
-public class DistributionController implements IAdmittance {
+public class DistributionController {
 
 	@Autowired
 	private GetSession getSession;

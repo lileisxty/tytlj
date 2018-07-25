@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping(value = "/code")
 public class CodeController {
-	@RequestMapping(value = "/chcekCode", method = RequestMethod.POST)
+	@RequestMapping(value = "/checkCode", method = RequestMethod.POST)
 	public @ResponseBody
 	void checkCode(HttpServletRequest request, HttpServletResponse response,
 			String code) {

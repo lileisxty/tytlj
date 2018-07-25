@@ -163,14 +163,6 @@ public class StaticPgController {
 							stationPg.setPassenger(cellValue7);// 客运收入(万元)
 							stationPg.setFreight(cellValue8);// 货运收入(万元)
 							stationPg.setTranslocation(cellValue9);// 办理列(列)
-							// logger.info("列類型cell_0：" + cell_0.getCellType()
-							// + "cell_3:" + cell_3.getCellType());
-							// logger.info("第" + i + "行数据：" + "---" + cellValue1
-							// + "---" + cellValue2 + "---" + cellValue3
-							// + "---" + cellValue4 + "---" + cellValue5
-							// + "---" + cellValue6 + "---" + cellValue7
-							// + "---" + cellValue8 + "---" + cellValue9
-							// + "---");
 							list.add(stationPg);
 						}
 						stationService.deleteStationPgs(list.get(0).getYear(),

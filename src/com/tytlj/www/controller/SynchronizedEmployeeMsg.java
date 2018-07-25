@@ -41,7 +41,6 @@ public class SynchronizedEmployeeMsg {
 	// 每天凌晨1点执行一次："0 0 1 * * ?"
 	// @Scheduled(cron = "0 0 1 * * ?")
 	public void taskCreateDutyExcel() {
-		logger.info("synchronized employee");
 		String webServiceUrl = "http://10.81.76.17/ty_cwd/ getstafflist?token=33dac39bfd057605ef44a6dbd08fa39f";
 		Map<String, Employee> map = new HashMap<String, Employee>();
 		try {

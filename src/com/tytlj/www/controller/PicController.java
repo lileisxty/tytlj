@@ -108,7 +108,6 @@ public class PicController extends BaseController {
 	 */
 	@RequestMapping(value = "dayWorkList", method = RequestMethod.POST)
 	public ModelAndView getDayWork(String deptCode, String day, Model model) {
-		logger.info("部门编码：" + deptCode + "时间：" + day);
 		List<DayWork> dayWorks = new ArrayList<DayWork>();
 		dayWorks = getWebServiceDayWork.getDayWorkList(deptCode, day);
 		if (dayWorks != null) {
