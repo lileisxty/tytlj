@@ -58,15 +58,13 @@
  		var jsCommonKw="";//查询关键字
  		var jsCommonPageSize;//总页数
  		$(function(){
- 			//clearTable();
  			selectDataLoad();
-/*  			dataLoad();
- */ 			var oBtn=document.getElementById("queryForKeyWord");
+ 			var oBtn=document.getElementById("queryForKeyWord");
  			//页面查询触发事件
  			oBtn.onclick=function(){
  				jsCommonKw=$('#oSelect option:selected').val();
  				dataLoad();
- 			}
+ 			};
  		});
  		//加载下拉框选项
  		function selectDataLoad(){

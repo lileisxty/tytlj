@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
 <title>太原车务段网络派计工系统</title>
 <link rel="stylesheet" type="text/css" href="<%=path %>/loginPage/css/normalize.css" />
@@ -48,9 +48,8 @@
 							<div class="row">
 								<span id="codeMsg"></span>
 							</div>
-							<div class="mb2"><input type="submit" class="act-but submit" style="color: #FFFFFF" value="提交"></intput></div>
-<!-- 							<div class="mb2"><a id="post" class="act-but submit" href="javascript:;" style="color: #FFFFFF">登录</a></div>
- -->							<img style="float:right" id="imgCode" alt="" src="<%=path %>/code/getCode?p="+Math.random() />
+							<div class="mb2"><input type="submit" class="act-but submit" style="color: #FFFFFF" value="提交" /></div>
+							<img style="float:right" id="imgCode" alt="" src="<%=path %>/code/getCode?p=<%=new Date().toString() %>" />
 						</form>
 					</div>
 				</div>
@@ -72,10 +71,6 @@
 <script src="<%=path%>/JqueryValidate/messages_zh.js"></script>
 <script type="text/javascript">
 	$(function(){
-		/* $("#post").on("click",function(){
-			$("#loginPageForm").submit();
-		}); */
-		
 		$("#imgCode").on("click",function(){
 			$(this).attr("src","<%=path %>/code/getCode?p="+Math.random());
 		});
@@ -111,7 +106,7 @@
 					required:true,
 					rangelength:[4,4],
 					remote:{
-						url:"<%=path %>/code/chcekCode",
+						url:"<%=path %>/code/checkCode",
 						type:"post",
 						dataType:"text",
 						data:{

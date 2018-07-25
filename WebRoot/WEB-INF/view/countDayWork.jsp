@@ -52,7 +52,6 @@
     			  <div class="form-group">
     			  	<label for="dayTime">日期：</label>
     			  	<input type="date" name="day" id="dayTime" value="${oneDay }"/>
-    			  	
      			  </div>
      			  
 				  <div class="form-group">

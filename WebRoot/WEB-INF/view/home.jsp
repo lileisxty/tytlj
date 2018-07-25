@@ -14,7 +14,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="content-type" content="text/html">
   <title><fmt:message key="home_title"/></title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -64,7 +64,7 @@
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas">
         <span class="sr-only">Toggle navigation</span>
       </a>
         <ul class="nav navbar-nav">
