@@ -207,14 +207,14 @@ public class GetWebServiceDayWork {
 		map1.put("month", String.valueOf(mounth));
 		map1.put("year", String.valueOf(year));
 		StationPg stationPg = null;
-		Map<String, String> map = GlobalVariable.stationRelation;
+		Map<String, String> map = GlobalVariable.STATIONRELATION;
 		String fatherDept = map.get(deptCode);
 		// 如果在车站对应关系中能找到父站编码则使用父站编码
 		if (fatherDept != null) {
 			// 第一步根据部门编码查询部门名称，例如部门编码：89000，某一天格式2018-05-10
 			// 获取部门名称
-			String deptName = GlobalVariable.departmentInfo.get(fatherDept);
-			String selfDeptName = GlobalVariable.departmentInfo.get(deptCode);
+			String deptName = GlobalVariable.DEPARTMENTINFO.get(fatherDept);
+			String selfDeptName = GlobalVariable.DEPARTMENTINFO.get(deptCode);
 			map1.put("station", deptName);
 			// 获取某个站某月的派工总量
 			Session session = null;
@@ -268,7 +268,7 @@ public class GetWebServiceDayWork {
 		} else {
 			// 第一步根据部门编码查询部门名称，例如部门编码：89000，某一天格式2018-05-10
 			// 获取部门名称
-			String deptName = GlobalVariable.departmentInfo.get(deptCode);
+			String deptName = GlobalVariable.DEPARTMENTINFO.get(deptCode);
 			map1.put("station", deptName);
 			// 获取某个站某月的派工总量
 			Session session = null;

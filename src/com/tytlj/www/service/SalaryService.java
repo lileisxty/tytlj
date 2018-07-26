@@ -181,7 +181,7 @@ public class SalaryService {
 		Map<String, Pothook> mapPothook = makeMapPothook(getAllPothook());
 		// 部门全部员工信息
 		List<Employee> employees = getOneDeptCustom(
-				GlobalVariable.departmentInfo.get(deptCode), month);
+				GlobalVariable.DEPARTMENTINFO.get(deptCode), month);
 		Iterator<Employee> iterator = employees.iterator();
 		// 找出部门员工工资最大的数
 		List<Integer> max = new ArrayList<Integer>();
@@ -781,7 +781,7 @@ public class SalaryService {
 		String sql = "SELECT SUM(employee.`salary`),employee.`position` FROM employee WHERE employee.`department`=? GROUP BY employee.`position`";
 		Session session = null;
 		Transaction tran = null;
-		String department = GlobalVariable.departmentInfo.get(deptCode);
+		String department = GlobalVariable.DEPARTMENTINFO.get(deptCode);
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		try {
 			session = HibernateSessionFactory.getSession();

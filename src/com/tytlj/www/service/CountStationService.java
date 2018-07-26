@@ -444,7 +444,7 @@ public class CountStationService {
 			// Map<String, String> map = new HashMap<String, String>();
 			// map.put("deptCode", calculationWorkpg.getId());
 			// Department dept = countDaoWorkService.getDepartment(map);
-			stationCountWork.setStation(GlobalVariable.departmentInfo
+			stationCountWork.setStation(GlobalVariable.DEPARTMENTINFO
 					.get(calculationWorkpg.getId()));
 			list.add(stationCountWork);
 		}
