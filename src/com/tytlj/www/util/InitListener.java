@@ -16,9 +16,9 @@ public class InitListener implements InitializingBean {
 
 	private void initGlobalWebServiceClientInfo() {
 		InitDataService initDataService = new InitDataService();
-		GlobalVariable.departmentInfo = initDataService.mapDepartmentInfo();
-		GlobalVariable.departRelation = initDataService.getDeptRelation();
-		GlobalVariable.stationRelation = initDataService.getStationRelation();
+		GlobalVariable.DEPARTMENTINFO = initDataService.mapDepartmentInfo();
+		GlobalVariable.DEPARTRELATION = initDataService.getDeptRelation();
+		GlobalVariable.STATIONRELATION = initDataService.getStationRelation();
 	}
 
 }
