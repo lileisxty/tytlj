@@ -71,13 +71,13 @@ public class SysManagerController {
 			// 如果不是admin登录
 			if (!deptCode.equals("admin")) {
 				// 1先根据登录用户的部门编码找对应的部门名称
-				String deptName = GlobalVariable.departmentInfo.get(deptCode);
+				String deptName = GlobalVariable.DEPARTMENTINFO.get(deptCode);
 				// 2将查询条件部门名称放到map中，根据部门名称查询
 				map.put("department", deptName);
 			}
 		} else {
 			// 1先根据登录用户的部门编码找对应的部门名称
-			String deptName = GlobalVariable.departmentInfo.get(kw);
+			String deptName = GlobalVariable.DEPARTMENTINFO.get(kw);
 			// 2将查询条件部门名称放到map中，根据部门名称查询
 			map.put("department", deptName);
 		}
@@ -102,14 +102,14 @@ public class SysManagerController {
 		if ("admin".equals(deptCode)) {
 			departments = userService.detpList();
 		} else {
-			Map<String, String> map = GlobalVariable.departRelation;
+			Map<String, String> map = GlobalVariable.DEPARTRELATION;
 			Set<String> set = map.keySet();
 			// 如果是有上级部门信息则显示上下级部门
 			if (set.contains(deptCode)) {
 				String deptCodeStr = map.get(deptCode);
 				String[] deptCodes = deptCodeStr.split(",");
 				for (int i = 0; i < deptCodes.length; i++) {
-					String departmentName = GlobalVariable.departmentInfo
+					String departmentName = GlobalVariable.DEPARTMENTINFO
 							.get(deptCodes[i]);
 					Department department = new Department();
 					department.setDepartment(departmentName);
@@ -118,7 +118,7 @@ public class SysManagerController {
 				}
 			} else {
 				// 把内存中的部门信息返回页面
-				String departmentName = GlobalVariable.departmentInfo
+				String departmentName = GlobalVariable.DEPARTMENTINFO
 						.get(deptCode);
 				Department department = new Department();
 				department.setDepartment(departmentName);

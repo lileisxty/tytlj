@@ -238,7 +238,7 @@ public class DistributionController {
 			@RequestParam String month, @RequestParam String deptCode) {
 		System.out.println("month:" + month + "deptCode:" + deptCode);
 		ByteArrayOutputStream ops = null;
-		String department = GlobalVariable.departmentInfo.get(deptCode);
+		String department = GlobalVariable.DEPARTMENTINFO.get(deptCode);
 		String fileName = department + month + "应发工资明细导出.xlsx";
 		XSSFWorkbook wb = null;
 		Map<String, String> condition = new HashMap<String, String>();

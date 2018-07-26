@@ -73,7 +73,7 @@ public class StationQueryController {
 					deptCode);
 			if (list.size() > 0) {
 				list.get(0).setStation(
-						GlobalVariable.departmentInfo.get(deptCode));
+						GlobalVariable.DEPARTMENTINFO.get(deptCode));
 			}
 		}
 

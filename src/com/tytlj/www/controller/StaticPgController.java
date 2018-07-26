@@ -66,7 +66,7 @@ public class StaticPgController {
 			departments = userService.detpList();
 		} else {
 			// 把内存中的部门信息返回页面
-			String departmentName = GlobalVariable.departmentInfo.get(deptCode);
+			String departmentName = GlobalVariable.DEPARTMENTINFO.get(deptCode);
 			Department department = new Department();
 			department.setDepartment(departmentName);
 			department.setDeptCode(deptCode);
